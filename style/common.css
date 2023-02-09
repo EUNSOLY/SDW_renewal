@@ -16,6 +16,7 @@
   margin: 0 auto;
   max-width: var(--mx);
   border: 1px solid red;
+  width: calc(100% - 2rem);
 }
 
 /* 커스텀 */
@@ -119,8 +120,53 @@
   border: 1px solid var(--point_color1);
   color: #fff;
 }
+/* section main_wrap st*/
+section {
+  overflow: hidden;
+}
 
-@media (max-width: 780px) {
+/* section_banner st */
+.banner {
+  padding-top: 30.5%;
+  background-image: url(../img/indexBanner.png);
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  background-size: 100%;
+  position: relative;
+}
+
+.slogan {
+  width: 100%;
+  position: absolute;
+  top: 7vw;
+  left: 10vw;
+}
+.slogan h2 {
+  /* font-size: 4rem; */
+  font-size: 4vw;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 3vw;
+}
+.slogan p {
+  color: #fff;
+  font-size: 1.5vw;
+}
+.mobile {
+  display: none;
+}
+.slogan > div {
+  display: none;
+  width: 50px;
+}
+.slogan img {
+  width: 100%;
+}
+
+/* section_service st */
+
+/* 미디어쿼리 */
+@media (max-width: 805px) {
   .gnb {
     display: none;
   }
@@ -129,7 +175,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .top_wrap {
     align-items: center;
   }
@@ -161,5 +207,23 @@
   }
   .market_btn {
     display: none;
+  }
+  /* 슬로건 */
+  .slogan {
+    top: 10vw;
+  }
+  .slogan h2 {
+    display: none;
+  }
+  .slogan .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .slogan > div {
+    display: block;
   }
 }

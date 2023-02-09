@@ -205,3 +205,47 @@
 .box_1 {
   border: 1px solid blue;
 }
+/* 이미지 삽입 배너 */
+/* section main_wrap st*/
+.banner {
+  /* border: 1px solid red; */
+  position: relative;
+  padding-top: 30%;
+  overflow: hidden;
+}
+.bannerWrap {
+  position: absolute;
+  top: 0;
+}
+.bannerWrap img {
+  width: 100%;
+}
+.slogan {
+  position: absolute;
+  top: 7vw;
+  left: 11.5vw;
+  /* border: 1px solid darkred; */
+}
+.slogan h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+.slogan p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+@media (max-width: 1240px) {
+  .slogan {
+    left: 6vw;
+  }
+  .slogan h2 {
+    font-size: 2.5rem;
+    font-weight: 00;
+    padding-bottom: 1.5rem;
+  }
+  .slogan p {
+    font-size: 1rem;
+  }
+}
