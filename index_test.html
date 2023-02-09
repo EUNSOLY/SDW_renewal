@@ -4,15 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>술담화 예시</title>
+    <title>이은솔 술담화 리뉴얼 테스트</title>
     <link rel="stylesheet" href="./style/my_reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style/common2.css" />
   </head>
   <body>
     <header class="hd">
       <div class="top_wrap mx">
         <h1 class="logo">
-          <img src="./img/logo_simb.png" alt="술담화 로고" />
+          <img src="./img/logo_simb.png" alt="술담화 로고" class="pcLogo" />
+          <a href="#none"
+            ><img src="./img/logo_심볼.png" alt="모바일 로고" class="Mlogo" />
+          </a>
         </h1>
         <nav class="gnb">
           <a href="#none">담화소개</a>
@@ -20,8 +34,6 @@
         </nav>
         <div class="m_page">
           <a href="#none" title="로그인">
-            <!-- <i class="fa-light fa-user"></i> -->
-            <!-- <img src="./img/logoin.svg" alt="로그인" /> -->
             <svg
               width="36"
               height="41"
@@ -47,8 +59,6 @@
             </svg>
           </a>
           <a href="#none" title="장바구니">
-            <!-- <i class="fa-light fa-cart-shopping"></i> -->
-            <!-- <img src="./img/shopping_basket.svg" alt="장바구니" /> -->
             <svg
               width="36"
               height="41"
@@ -66,58 +76,81 @@
         <a href="#none" class="market_btn"><span>담화 마켓</span></a>
       </div>
     </header>
-    <section class="main">
-      <div class="main_banner">
-        <img src="./img/index_main_banner.png" alt="PC 배너" clsss="PC" />
-        <img src="./img/M_banner.png" alt="모바일배너" class="Mo" />
-      </div>
-    </section>
+    <section class="main_wrap">
+      <article class="banner">
+        <div class="slogan">
+          <h2>
+            세상의 술자리를 <br />
+            다채롭게
+          </h2>
+          <p class="pc">국내 최초, 국내 최대! NO.1 전통주 구독 서비스</p>
+          <p class="pc">
+            세세한 품질관리와 깐깐하게 담은 인생술 ONLY 담화 에서 만나보세요!
+          </p>
+          <div class="mobile">
+            <p>
+              국내 최초, 국내 최대! <br />
+              NO.1 전통주 구독 서비스
+            </p>
+            <img src="./img/logo_text.png" alt="모바일용 텍스트" />
+          </div>
+        </div>
 
-    <!-- <article class="gudok_wrap mx">
-        <button class="gudok_btn">
-          구독하러가기
-          <span><i class="fa-solid fa-angle-up"></i></span>
-        </button>
-        <h2 class="gudok_tit">
-          한달에 한번 큐레이션과 함께 <span>'집 앞'</span>으로 배송되는 나의
+        <a href="#none" class="service_btn">구독하러 가기 </a>
+      </article>
+      <article class="service_wrap mx">
+        <h2 class="service_slogan">
+          한달에 한번 큐레이션과 함께 <span>‘집 앞’</span>으로 배송되는 나의
           인생술
         </h2>
-        <div>
-          <article class="explan_text">
-            <div class="box box_1">
-              <img src="./img/My_Pick.png" alt="나의 pink" />
-              <p>
-                원하는 종류의 술을 선택 할 수 있어요<br />
-                담화 박스 & 증류수 담화박스
-              </p>
-            </div>
-            <div class="box box_1">
-              <img src="./img/My_Pick.png" alt="나의 pink" />
-              <p>
-                원하는 종류의 술을 선택 할 수 있어요<br />
-                담화 박스 & 증류수 담화박스
-              </p>
-            </div>
-          </article>
-          <article class="explan_img"></article>
+        <div class="service_box">
+          <div class="service_ex">
+            <ul class="service">
+              <li class="service_text">
+                <div>
+                  <img src="./img/My_Pick.png" alt="나의 pick" />
+                </div>
+                <h3>나의PICK</h3>
+                <p>
+                  원하는 종류의 술을 선택 할 수 있어요<br />
+                  담화 박스 & 증류수 담화박스
+                </p>
+              </li>
+              <li class="service_text text_3">
+                <div>
+                  <img src="./img/stop.png" alt="쉬어가기" />
+                </div>
+                <h3>쉬어가기</h3>
+                <p>
+                  술자리에 휴식이 필요할 땐 쉬어가세요 <br />
+                  당연히, 금액은 청구되지 않아요
+                </p>
+              </li>
+              <li class="service_text">
+                <div>
+                  <img src="./img/Truck.png" alt="집앞배송" />
+                </div>
+                <h3>문앞배송</h3>
+                <p>
+                  매월 배송비 없이 원하는 곳에서 편하게<br />다양한 술자리를
+                  즐길 수 있어요
+                </p>
+              </li>
+              <li class="service_text">
+                <div>
+                  <img src="./img/bell.png" alt="알림문자" />
+                </div>
+                <h3>알림문자</h3>
+                <p>
+                  결제 3일 전 안내문자와 함께 <br />
+                  이달의 담화박스를 보고 결정하세요
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="service_gif">gif</div>
         </div>
-      </article> -->
+      </article>
+    </section>
   </body>
 </html>
-
-<!-- 이미지 삽입 배너 -->
-<section class="main_wrap">
-  <article class="banner">
-    <div class="bannerWrap">
-      <img src="./img/indexBanner.png" alt="배너이미지" />
-      <div class="slogan">
-        <h2>
-          세상의 술자리를 <br />
-          다채롭게
-        </h2>
-        <p>국내 최초, 국내 최대! NO.1 전통주 구독 서비스</p>
-        <p>세세한 품질관리와 깐깐하게 담은 인생술 ONLY 담화 에서 만나보세요!</p>
-      </div>
-    </div>
-  </article>
-</section>

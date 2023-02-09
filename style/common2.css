@@ -10,15 +10,20 @@
   --point_color1: #f4bb5f;
   --point_color2: #5c96ca;
   color: #232323;
+  --font_color70: rgba(35, 35, 35, 0.7);
 }
 
 .mx {
   margin: 0 auto;
   max-width: var(--mx);
+  border: 1px solid red;
+  width: calc(100% - 2rem);
 }
 
 /* 커스텀 */
-
+.Mlogo {
+  display: none;
+}
 .top_wrap {
   /* border: 1px solid red; */
   display: flex;
@@ -49,16 +54,16 @@
   padding: var(--gap_2) var(--gap_1);
   position: relative;
   bottom: -0.25rem;
-
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .gnb a::before {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 100%;
   left: 0;
-  bottom: 0;
+  bottom: -10%;
   border-bottom: 3px solid var(--point_color1);
   transition: 0.3s;
 }
@@ -71,8 +76,7 @@
 }
 .m_page a {
   /* border: 1px solid blue; */
-  position: relative;
-  bottom: -0.25rem;
+  margin-top: 0.25rem;
   padding: 0 var(--gap_2);
 }
 
@@ -84,11 +88,6 @@
 .m_page svg path {
   transition: 0.3s;
 }
-/* 
-.m_page a img {
-  padding-top: calc(var(--gap_1) * 2);
-  width: 90%;
-} */
 
 .market_btn {
   /* border: 1px solid blue; */
@@ -111,141 +110,226 @@
   color: var(--point_color1);
 }
 .gnb a:hover::before {
-  width: 100%;
+  bottom: 0;
+}
+
+.m_page a:hover svg path {
+  fill: var(--point_color1);
 }
 .market_btn:hover span {
   background-color: var(--point_color1);
   border: 1px solid var(--point_color1);
   color: #fff;
 }
-.m_page a:hover svg path {
-  fill: var(--point_color1);
-}
-.main {
-  border: 1px solid darkmagenta;
-}
-.main_banner {
-  padding-top: 30.5%;
-  position: relative;
-  top: 0;
-  border: 1px solid red;
-}
-.main_banner img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  opacity: 1;
-}
-.main_banner .Mo {
-  opacity: 0;
-}
 
-@media (max-width: 620px) {
-  .main_banner {
-    background-color: aqua;
-    padding-top: 30.5%;
-  }
-  .main_banner .PC {
-    opacity: 0;
-  }
-  .main_banner .Mo {
-    opacity: 1;
-  }
-}
-.gudok_wrap {
-  position: relative;
-  padding-top: 5%;
-}
-.gudok_btn {
-  position: absolute;
-  top: -2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  outline: none;
-  border: none;
-  font-size: 2rem;
-  padding: var(--gap_1) var(--btn_gap);
-  color: #fff;
-  background-color: var(--point_color1);
-}
-.gudok_btn i {
-  transform: rotate(90deg);
-}
+/* section_banner st */
 
-.gudok_tit {
-  font-size: 2rem;
-  text-align: center;
-  color: rgba(35, 35, 35, 0.7);
-}
-.gudok_tit span {
-  color: #232323;
-}
-.gudok_wrap > div {
-  border: 1px solid red;
-}
-.m_page a:hover svg path {
-  fill: var(--point_color1);
-}
-
-/*  구독 안내 및 gif */
-.explan_text {
-  width: calc(100% / 2);
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid yellow;
-  padding: var(--gap_1);
-}
-.box > img {
-  width: 10%;
-}
-.box {
-  width: calc(100% / 2);
-  padding: var(--gap_1);
-}
-.box_1 {
-  border: 1px solid blue;
-}
-/* 이미지 삽입 배너 */
-/* section main_wrap st*/
 .banner {
-  /* border: 1px solid red; */
+  /* border: 10px solid yellow; */
+  height: 30vw;
+  background-image: url(../img/indexBanner.png);
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  background-size: 100%;
   position: relative;
-  padding-top: 30%;
-  overflow: hidden;
-}
-.bannerWrap {
-  position: absolute;
-  top: 0;
-}
-.bannerWrap img {
-  width: 100%;
+  margin-bottom: 3rem;
 }
 .slogan {
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(15%, 50%);
   position: absolute;
-  top: 7vw;
-  left: 11.5vw;
-  /* border: 1px solid darkred; */
 }
 .slogan h2 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: 3vw;
   font-weight: 500;
   color: #fff;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .slogan p {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.4vw;
 }
-@media (max-width: 1240px) {
+.mobile {
+  display: none;
+}
+.slogan img {
+  width: 100%;
+}
+
+/* section_service st */
+
+.service_btn {
+  font-size: 2rem;
+  border: 1px solid var(--point_color1);
+  background-color: var(--point_color1);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service_btn::after {
+  /* border: 1px solid red; */
+  content: "";
+  display: inline-block;
+  background-image: url(../img/btn_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 0.25rem;
+}
+.service_slogan {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--font_color70);
+}
+.service_slogan span {
+  color: #232323;
+}
+.service_box > * {
+  border: 1px solid aquamarine;
+  width: 50%;
+}
+
+.service_box {
+  /* border: 2px solid salmon; */
+  display: flex;
+  padding: var(--gap_1);
+  flex-wrap: wrap;
+}
+.service_ex {
+  /* border: 4px solid blanchedalmond; */
+  display: flex;
+}
+/* ul */
+.service {
+  /* border: 3px solid cadetblue; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+/* li */
+.service_text {
+  width: 50%;
+  /* border: 1px solid aqua; */
+  margin-bottom: var(--gap_1);
+}
+.service_text:first-child {
+  padding-top: 2rem;
+}
+.service_text > * {
+  padding-bottom: var(--gap_2);
+}
+.service_text.text_3 {
+  margin-top: 1.5rem;
+}
+.service_text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.service_text p {
+}
+
+/* 미디어쿼리 */
+@media (max-width: 830px) {
+  .gnb {
+    display: none;
+  }
+  .m_page {
+    display: none;
+  }
   .slogan {
-    left: 6vw;
+    top: 50%;
+    left: 0;
+    transform: translate(5%, -50%);
   }
   .slogan h2 {
-    font-size: 2.5rem;
-    font-weight: 00;
-    padding-bottom: 1.5rem;
+    display: none;
   }
-  .slogan p {
+  .slogan .pc {
+    display: none;
+  }
+  .slogan .mobile {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .slogan .mobile > p {
+    font-size: 1.25rem;
+  }
+  .slogan .mobile > img {
+    margin-top: 1rem;
+    width: 100px;
+  }
+  .service_box > * {
+    border: 1px solid aquamarine;
+    width: 100%;
+  }
+  .service_btn {
     font-size: 1rem;
+    padding: 0.5rem 1rem;
+    bottom: -1rem;
+  }
+  .service_btn::after {
+    /* border: 1px solid red; */
+    background-size: 100%;
+    width: 12px;
+    height: 12px;
+    margin-left: 0.1rem;
+  }
+  .service_text {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .top_wrap {
+    align-items: center;
+  }
+  .logo > a {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .pcLogo {
+    display: none;
+  }
+
+  .Mlogo {
+    display: block;
+  }
+
+  .m_page {
+    /* border: 1px solid dodgerblue; */
+    margin-right: 0;
+    display: flex;
+  }
+  .m_page a svg {
+    padding: 0;
+  }
+  .m_page a:last-of-type {
+    display: none;
+  }
+  .market_btn {
+    display: none;
+  }
+  .slogan .mobile {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .slogan .mobile > p {
+    font-size: 1rem;
+  }
+  .slogan .mobile > img {
+    margin-top: 1rem;
+    width: 70px;
   }
 }
