@@ -499,7 +499,7 @@
   .market_imgBox {
     padding: 0;
   }
-  .market_imgBox ul {
+  .marketg_imgBox ul {
     flex-wrap: wrap;
     margin-top: var(--gap_1);
   }
