@@ -501,6 +501,7 @@
   }
   .market_imgBox ul {
     flex-wrap: wrap;
+    margin-top: var(--gap_1);
   }
   .market_imgBox li {
     width: calc(100% / 2);
