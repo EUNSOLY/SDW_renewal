@@ -126,31 +126,33 @@
 
 .banner {
   /* border: 10px solid yellow; */
-  height: 30vw;
   background-image: url(../img/indexBanner.png);
   background-repeat: no-repeat;
   /* background-size: 100%; */
-  background-size: 100%;
-  position: relative;
+  background-size: cover;
   margin-bottom: 3rem;
+  position: relative;
 }
 .slogan {
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translate(15%, 50%);
-  position: absolute;
+  border: 1px solid red;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+  padding-left: 2rem;
+  max-width: var(--mx);
+  /* border: 4px solid red; */
+  margin: 0 auto;
 }
 .slogan h2 {
-  /* font-size: 4rem; */
-  font-size: 3vw;
+  font-size: 4rem;
+  /* font-size: 3vw; */
   font-weight: 500;
   color: #fff;
   padding-bottom: 2rem;
 }
 .slogan p {
   color: #fff;
-  font-size: 1.4vw;
+  font-size: 1.5rem;
+  /* font-size: 1.4vw; */
 }
 .mobile {
   display: none;
@@ -233,8 +235,6 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-.service_text p {
-}
 
 /* 미디어쿼리 */
 @media (max-width: 830px) {
@@ -245,9 +245,7 @@
     display: none;
   }
   .slogan {
-    top: 50%;
-    left: 0;
-    transform: translate(5%, -50%);
+    /* padding-bottom: 3vw; */
   }
   .slogan h2 {
     display: none;
