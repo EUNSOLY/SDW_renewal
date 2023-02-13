@@ -17,8 +17,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style/common.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./inext.js" defer></script>
   </head>
   <body>
     <div class="wrap">
@@ -201,9 +206,9 @@
         <h3 class="main_tit review_tit">
           <span>솔직한</span>담화후기를 만나보세요.
         </h3>
-        <div class="review_content_box">
-          <ul class="slide_box">
-            <li class="slide slide2">
+        <div class="swiper test review_content_box">
+          <ul class="swiper-wrapper slide_box">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img1.png" alt="리뷰이미지" />
                 <div class="star">
@@ -222,7 +227,7 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
-            <li class="slide slide2">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img2.png" alt="리뷰이미지" />
                 <div class="star">
@@ -241,7 +246,7 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
-            <li class="slide slide3">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img3.png" alt="리뷰이미지" />
                 <div class="star">
@@ -260,7 +265,7 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
-            <li class="slide slide4">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img4.png" alt="리뷰이미지" />
                 <div class="star">
@@ -279,7 +284,7 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
-            <li class="slide slide5">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img5.png" alt="리뷰이미지" />
                 <div class="star">
@@ -298,7 +303,7 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
-            <li class="slide slide6">
+            <li class="swiper-slide slide">
               <div class="content_wrap">
                 <img src="./img/review_img6.png" alt="리뷰이미지" />
                 <div class="star">
@@ -317,7 +322,48 @@
                 <p class="content_nik">콩짱**</p>
               </div>
             </li>
+            <li class="swiper-slide slide">
+              <div class="content_wrap">
+                <img src="./img/review_img5.png" alt="리뷰이미지" />
+                <div class="star">
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                </div>
+                <p class="content_text">
+                  기대 안하고 구매했는데 아기자기한 담화박스가 너무 귀여워서
+                  좋았어요~술 구성도 미리보기로 받고 싶은 술이였어서
+                  구매했더니구매의 후회되는점이 한개도없네요 담화 박스
+                  추천합니다~
+                </p>
+                <p class="content_nik">콩짱**</p>
+              </div>
+            </li>
+            <li class="swiper-slide slide">
+              <div class="content_wrap">
+                <img src="./img/review_img3.png" alt="리뷰이미지" />
+                <div class="star">
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                  <img src="./img/Star 1.png" alt="리뷰별" />
+                </div>
+                <p class="content_text">
+                  기대 안하고 구매했는데 아기자기한 담화박스가 너무 귀여워서
+                  좋았어요~술 구성도 미리보기로 받고 싶은 술이였어서
+                  구매했더니구매의 후회되는점이 한개도없네요 담화 박스
+                  추천합니다~
+                </p>
+                <p class="content_nik">콩짱**</p>
+              </div>
+            </li>
           </ul>
+          <div class="swiper-button-next next_btn"></div>
+          <div class="swiper-button-prev prev_btn"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </section>
       <footer>
@@ -362,6 +408,9 @@
           <a href="#none" class="sv_link">서비스가입사실확인</a>
         </div>
       </footer>
+      <div class="go_top">
+        <img src="./" alt="" />
+      </div>
     </div>
   </body>
 </html>
