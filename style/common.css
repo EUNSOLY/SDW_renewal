@@ -126,6 +126,9 @@
   border: 1px solid var(--point_color1);
   color: #fff;
 }
+section {
+  margin-bottom: var(--gap_1);
+}
 /* section_banner st */
 .banner {
   background-image: url(../img/indexBanner.png);
@@ -270,7 +273,7 @@
 
 /* section2_market_wrap st */
 
-.market_name {
+.main_name {
   display: flex;
   /* border: 1px solid red; */
   color: var(--point_color2);
@@ -278,7 +281,7 @@
   font-weight: 400;
   position: relative;
 }
-.market_name::before {
+.main_name::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -287,7 +290,7 @@
   bottom: 0;
   background-color: var(--point_color2);
 }
-.market_name::after {
+.main_name::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -296,21 +299,21 @@
   right: -100%;
   background-color: var(--point_color2);
 }
-.market_name span {
+.main_name span {
   padding-top: 0.15rem;
 }
-.market_name img {
+.main_name img {
   /* border: 1px solid red; */
   width: 75%;
   margin-top: 1rem;
   padding: 0 0.5rem;
 }
-.market_tit {
-  font-size: 1.5rem;
+.main_tit {
+  font-size: 1rem;
   color: var(--font_color70);
   padding-top: var(--gap_1);
 }
-.market_tit span {
+.main_tit span {
   color: var(--font_colorBK);
 }
 
@@ -381,6 +384,86 @@
 .m_btn {
   margin-top: 4vw;
   display: inline-block;
+}
+.review_name {
+  padding-top: 4rem;
+}
+
+.review_content_box {
+  padding: var(--gap_1) var(--gap_1);
+
+  overflow: hidden;
+}
+.slide_box {
+  width: calc(200%);
+  display: flex;
+}
+.slide {
+  width: calc(100% / 6);
+  padding: 0 2rem;
+}
+.content_wrap {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+}
+.content_wrap > * {
+  padding-bottom: var(--gap_2);
+}
+.content_wrap > img {
+  width: 100%;
+}
+.content_text {
+  padding: 0 0.25rem;
+}
+.content_nik {
+  color: var(--font_color50);
+}
+footer {
+  margin-top: 5rem;
+  background-color: #919191;
+}
+.footer_text {
+  color: #fff;
+  font-size: 0.85rem;
+}
+.footer_text > p {
+  padding: 0.5rem 0;
+}
+.footer_text > p:nth-child(3) span {
+  font-weight: bold;
+}
+.footer_text > p span {
+  padding-right: 0.5rem;
+}
+.footer_tit {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_tit span {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer_tit span a {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.footer_tit span a img {
+  width: 80%;
+}
+
+.sv_link {
+  display: block;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-decoration: underline;
 }
 /* 미디어쿼리 */
 
@@ -476,16 +559,16 @@
   .service_text p {
     font-size: 1.25rem;
   }
-  .market_name {
+  .main_name {
     font-size: 1.5rem;
     /* border: 2px dotted dodgerblue; */
   }
-  .market_name img {
+  .main_name img {
     margin-top: 0.15rem;
     padding: 0 0.25rem;
   }
-  .market_tit {
-    font-size: 1rem;
+  .main_tit {
+    font-size: 0.85rem;
   }
   .market_imgBox {
     padding-top: 4rem;
@@ -493,7 +576,18 @@
 }
 
 @media (max-width: 640px) {
-  .market_wrap > .market_tit {
+  .banner {
+    background-image: url(../img/M_mainBanner.png);
+    background-size: 120%;
+  }
+  .slogan {
+    /* border: 1px solid red; */
+    padding-bottom: 15%;
+  }
+  .mobile {
+    padding-top: 12vw;
+  }
+  .market_wrap > .main_tit {
     display: none;
   }
   .market_imgBox {
@@ -540,12 +634,12 @@
     transition: 0.3s;
     cursor: pointer;
   }
-  .market_tit {
+  .main_tit {
     color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
     padding-bottom: 2vw;
   }
-  .market_tit span {
+  .main_tit span {
     color: #fff;
     font-weight: bold;
   }
@@ -583,16 +677,19 @@
   .service_text p {
     font-size: 0.75rem;
   }
-  .market_name {
+  .main_name {
     font-size: 1rem;
     /* border: 2px dotted dodgerblue; */
   }
-  .market_name img {
+  .main_name img {
     width: 45%;
     margin-top: 0.15rem;
     padding: 0 0.25rem;
   }
-  .market_tit {
+  .main_tit {
     font-size: 0.75rem;
+  }
+  .footer_tit {
+    display: block;
   }
 }
