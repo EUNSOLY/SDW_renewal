@@ -1,6 +1,4 @@
 var swiper = new Swiper(".test", {
-  // cssMode: true,
-  slidesPerView: 3,
   navigation: {
     nextEl: ".next_btn",
     prevEl: ".prev_btn",
@@ -8,8 +6,12 @@ var swiper = new Swiper(".test", {
   pagination: {
     el: ".swiper-pagination",
   },
+
+  slidesPerView: 3,
   keyboard: true,
   spaceBetween: 16,
   centeredSlides: true,
   loop: true,
+  spaceBetween: 2,
+  centeredSlides: true,
 });
