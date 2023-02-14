@@ -138,3 +138,16 @@ div.btn_wrap {
 .content_text > span {
   color: var(--point_color1);
 }
+
+.card_box {
+  padding: var(--btn_gap) 11rem;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  border: 1px solid red;
+}
+.card img {
+  width: 100%;
+}
