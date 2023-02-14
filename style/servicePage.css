@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import url(./header.css);
+@import url(./footer.css);
+:root {
+  --mx: 1440px;
+  --btn_gap: 32px;
+  --gap_1: 16px;
+  --gap_2: 8px;
+  --gap_3: 24px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  --point_color1: #f4bb5f;
+  --point_color2: #5c96ca;
+  color: #232323;
+  --font_color70: rgba(35, 35, 35, 0.7);
+  --font_color50: rgba(35, 35, 35, 0.5);
+  --font_colorBK: #000;
+  --font_colorGY: #696868;
+  font-size: 16px;
+}
+.wrap {
+  overflow: hidden;
+}
+.mx {
+  margin: 0 auto;
+  max-width: var(--mx);
+  width: calc(100% - 2rem);
+}
+
+/* 커스텀 */
+img {
+  width: 70%;
+}
+.main {
+  background-color: #f4f4f4;
+  margin-top: 2rem;
+  margin-bottom: var(--btn_gap);
+}
+
+.service_wrap {
+  /* border: 1px solid red; */
+  padding: 2rem 5.5rem;
+  display: flex;
+}
+.service_wrap > * {
+  width: 50%;
+}
+.thumbnail_wrap {
+  /* border: 1px solid blue; */
+  /* padding-right: 6rem; */
+}
+.mini_thumbnail {
+  /* border: 1px solid pink; */
+  display: flex;
+  padding-top: var(--gap_1);
+}
+.mini_thumbnail img {
+  width: 20%;
+  padding-right: var(--gap_1);
+  cursor: pointer;
+}
+
+.purchase {
+  padding: 0 5rem;
+  /* border: 1px solid salmon; */
+}
+.purchase h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  padding-bottom: var(--gap_1);
+}
+.box {
+  /* border: 1px solid red; */
+  padding: var(--gap_1) 0;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5rem;
+}
+.name_box {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.select_box {
+  width: 200px;
+  border: 1px solid #9e9e9e;
+  color: #9e9e9e;
+  padding: 0.25rem 0;
+}
+.box_total {
+  /* border: 1px solid red; */
+  margin-top: 3rem;
+}
+div.btn_wrap {
+  padding-right: 0;
+  justify-content: center;
+}
+.btn {
+  font-size: 1rem;
+  border: 1px solid var(--point_color1);
+  background-color: var(--point_color1);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.service_btn_1 {
+  margin-right: var(--gap_1);
+}
+
+/* section_1 st */
+
+.content_tit {
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  text-align: center;
+}
+.content_tit::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #232323;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content_text {
+  padding-top: var(--gap_3);
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.content_text > span {
+  color: var(--point_color1);
+}

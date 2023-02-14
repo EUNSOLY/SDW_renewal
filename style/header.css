@@ -1,0 +1,137 @@
+.Mlogo {
+  display: none;
+}
+.top_wrap {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  height: 90px;
+}
+.logo {
+  /* border: 1px solid blue; */
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  height: 90%;
+  width: 90%;
+}
+.gnb {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex: 1;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  align-items: flex-end;
+}
+.gnb a {
+  padding: var(--gap_2) var(--gap_1);
+  position: relative;
+  bottom: -0.25rem;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.gnb a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -10%;
+  border-bottom: 3px solid var(--point_color1);
+  transition: 0.3s;
+}
+.m_page {
+  /* border: 1px solid blue; */
+  margin-right: var(--gap_2);
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.m_page a {
+  /* border: 1px solid blue; */
+  margin-top: 0.25rem;
+  padding: 0 var(--gap_2);
+}
+
+.m_page svg {
+  padding-top: calc(var(--gap_1) * 2);
+
+  /* border: 1px solid red; */
+}
+.m_page svg path {
+  transition: 0.3s;
+}
+
+.market_btn {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.market_btn span {
+  display: flex;
+  background-color: var(--point_color2);
+  padding: var(--gap_2) var(--gap_1);
+  font-size: 1.5rem;
+  color: #fff;
+  border: 1px solid var(--point_color2);
+  position: relative;
+  bottom: -0.75rem;
+  transition: 0.3s;
+}
+/* header_hover */
+.gnb a:hover {
+  color: var(--point_color1);
+}
+.gnb a:hover::before {
+  bottom: 0.25rem;
+}
+
+.m_page a:hover svg path {
+  fill: var(--point_color1);
+}
+.market_btn:hover span {
+  background-color: var(--point_color1);
+  border: 1px solid var(--point_color1);
+  color: #fff;
+}
+@media (max-width: 1000px) {
+  .top_wrap {
+    align-items: center;
+  }
+  .logo > a {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .pcLogo {
+    display: none;
+  }
+
+  .Mlogo {
+    display: block;
+  }
+
+  .gnb {
+    display: none;
+  }
+  .m_page {
+    /* border: 1px solid dodgerblue; */
+    margin-right: 0;
+    display: flex;
+  }
+  .m_page a svg {
+    padding: 0;
+  }
+  .m_page a:last-of-type {
+    display: none;
+  }
+  .market_btn {
+    display: none;
+  }
+}

@@ -138,6 +138,7 @@ section {
   margin-bottom: 3rem;
   position: relative;
   z-index: 200;
+  margin-top: 2rem;
 }
 .slogan {
   /* border: 1px solid red; */
@@ -761,6 +762,7 @@ footer {
     padding-right: 0.5rem;
     min-width: 300px;
     white-space: normal;
+    cursor: grab;
     /* border: 1px solid blue; */
   }
   .next_btn,
