@@ -19,6 +19,7 @@
   --font_colorGY: #696868;
   font-size: 16px;
 }
+
 .wrap {
   overflow: hidden;
 }
@@ -144,12 +145,18 @@ div.btn_wrap {
   justify-content: space-between;
 }
 .card {
-  /* border: 1px solid red; */
+  transition: 0.5s;
+}
+.card:hover {
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateY(-20px);
 }
 .card img {
   width: 100%;
 }
-
+.card:hover img {
+}
 .card_slogan {
   color: rgba(35, 35, 35, 0.8);
   padding-bottom: var(--gap_2);

@@ -1,4 +1,4 @@
-var swiper = new Swiper(".test", {
+var swiper = new Swiper(".review_content_box", {
   navigation: {
     nextEl: ".next_btn",
     prevEl: ".prev_btn",

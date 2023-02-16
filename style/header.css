@@ -1,3 +1,31 @@
+@charset "utf-8";
+@import url(./header.css);
+@import url(./footer.css);
+:root {
+  --mx: 1440px;
+  --btn_gap: 32px;
+  --gap_1: 16px;
+  --gap_2: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  --point_color1: #f4bb5f;
+  --point_color2: #5c96ca;
+  color: #232323;
+  --font_color70: rgba(35, 35, 35, 0.7);
+  --font_color50: rgba(35, 35, 35, 0.5);
+  --font_colorBK: #000;
+  --font_colorGY: #696868;
+  font-size: 16px;
+}
+.mx {
+  margin: 0 auto;
+  max-width: var(--mx);
+  width: calc(100% - 2rem);
+}
+
+.hd {
+  letter-spacing: -4px;
+}
 .Mlogo {
   display: none;
 }
@@ -131,7 +159,26 @@
   .m_page a:last-of-type {
     display: none;
   }
+  /* .market_btn span {
+    display: flex;
+    background-color: var(--point_color2);
+    padding: var(--gap_2) var(--gap_1);
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid var(--point_color2);
+    position: relative;
+    transition: 0.3s;
+  } */
   .market_btn {
+    /* border: 1px solid red; */
     display: none;
+  }
+  .market_btn span {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: #fff;
+    position: static;
+    letter-spacing: 0;
   }
 }
