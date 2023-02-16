@@ -1,5 +1,5 @@
 @charset "utf-8";
-:root {
+/* :root {
   --mx: 1440px;
   --btn_gap: 32px;
   --gap_1: 16px;
@@ -19,7 +19,7 @@
   margin: 0 auto;
   max-width: var(--mx);
   width: calc(100% - 2rem);
-}
+} */
 
 /* footer st */
 footer {

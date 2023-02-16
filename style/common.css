@@ -16,6 +16,7 @@
   --font_colorBK: #000;
   --font_colorGY: #696868;
   font-size: 16px;
+  background-color: #fff;
 }
 html {
   scroll-behavior: smooth;
@@ -588,7 +589,9 @@ section {
   .market_imgBox {
     padding-top: 4rem;
   }
-
+  .review.mx {
+    width: 100%;
+  }
   .slide_box {
     width: calc(200%);
     display: flex;
@@ -612,7 +615,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
   }
   .slide.swiper-slide-active {
     transform: translateY(0);
@@ -723,6 +726,11 @@ section {
   .hover_cover:hover {
     opacity: 1;
   }
+
+  .slide {
+    /* border: 2px solid dodgerblue; */
+    padding: 0.5rem 0.85rem 1rem;
+  }
 }
 @media (max-width: 420px) {
   .fixd_wrap {
@@ -757,6 +765,10 @@ section {
   .service_text p {
     font-size: 0.75rem;
   }
+  .service_slogan,
+  .main_name {
+    letter-spacing: -2px;
+  }
   .main_name {
     font-size: 1rem;
     /* border: 2px dotted dodgerblue; */
@@ -769,15 +781,19 @@ section {
   .main_tit {
     font-size: 0.75rem;
   }
-  .slide {
-    width: calc(100% / 8);
-    padding: 0;
-    padding-right: 0.5rem;
-    min-width: 150px;
-    white-space: normal;
-    /* border: 1px solid blue; */
-  }
 
+  .slide_box {
+    padding: 1rem 0;
+  }
+  .slide {
+    /* border: 2px solid dodgerblue; */
+    padding: 1rem 0.85rem;
+  }
+  .review_name,
+  .review_tit {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
   .star img {
     width: 7%;
   }
