@@ -27,6 +27,8 @@
     />
     <!-- my_css -->
     <link rel="stylesheet" href="./style/common.css" />
+    <!-- 모달 css (ccs에 다로 넣을 예정) -->
+    <link rel="stylesheet" href="./style/modal.css" />
     <!-- 스와이퍼 js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- my.js -->
@@ -426,6 +428,83 @@
           <a href="#none" class="sv_link">서비스가입사실확인</a>
         </div>
       </footer>
+      <div class="modal-overlay">
+        <div class="modal_wrap">
+          <h2 class="madal_tit">주문 / 결제</h2>
+          <div class="modal">
+            <div class="modal_head">
+              <p>상품정보</p>
+              <div>
+                <p>배송비</p>
+                <p>수량</p>
+                <p>할인</p>
+                <p>적립</p>
+              </div>
+            </div>
+            <article class="modal_content">
+              <!--  상품 정보 작성 -->
+              <div class="bottom_wrap">
+                <div>
+                  <div class="modal_product"></div>
+                  <div class="modal_text">
+                    <p>[구독상품] 담화박스</p>
+                    <p>옵션 : 담화박스</p>
+                    <p class="mini_text">
+                      매월 셋째주 월요일마다 자동 결제됩니다!
+                    </p>
+                  </div>
+                </div>
+                <div class="modal_content_text">
+                  <p>무료</p>
+                  <p>01</p>
+                  <p>-5%</p>
+                  <p>10</p>
+                </div>
+              </div>
+              <div class="information_wrap">
+                <div class="address">
+                  <p>배송정보</p>
+                  <p>
+                    배송지 선택
+                    <span
+                      ><input type="radio" value="기본배송지" />기본배송지</span
+                    >
+                    <span
+                      ><input type="radio" value="신규배송지" />신규배송지</span
+                    >
+                  </p>
+                </div>
+                <div class="information">
+                  <p>
+                    <span>이름 / 연락처</span> &nbsp;&nbsp;&nbsp;
+                    <span>이은솔 010-1234-4567</span>
+                  </p>
+                  <p>
+                    <span>배송 요청사항</span> &nbsp;&nbsp;
+                    <span>
+                      <select name="배송 시 요청시항">
+                        <option value="">배송시 요청사항을 입력하세요.</option>
+                        <option value="문앞">문앞에 놔주세요.</option>
+                        <option value="경비실">경비실에 맞겨주세요.</option>
+                      </select>
+                    </span>
+                  </p>
+                </div>
+                <div class="address payment">
+                  <p>결제정보</p>
+                  <p>결제방법 선택</p>
+                  <div class="payment_box">
+                    <div class="naver_payment">네이버페이</div>
+                    <div class="kakao_payment">카카오페이</div>
+                    <div class="card_payment">신용카드</div>
+                    <div class="eat_payment">다른결제방법 선택</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
