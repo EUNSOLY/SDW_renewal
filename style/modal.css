@@ -1,39 +1,50 @@
 @charset "utf-8";
-:root {
-  --mx: 1440px;
-  --btn_gap: 32px;
-  --gap_1: 16px;
-  --gap_2: 8px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 300;
-  --point_color1: #f4bb5f;
-  --point_color2: #5c96ca;
-  color: #232323;
-  --font_color70: rgba(35, 35, 35, 0.7);
-  --font_color50: rgba(35, 35, 35, 0.5);
-  --font_colorBK: #000;
-  --font_colorGY: #696868;
-  font-size: 16px;
-  background-color: #fff;
-}
+
 .modal-overlay {
   width: 100%;
   height: 100%;
   background-color: #ddd;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.modal_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--point_color1);
+  background-color: var(--point_color1);
+  cursor: pointer;
+}
+.modal_close::before,
+.modal_close::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal_close::after {
+  right: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .modal_wrap {
   width: 800px;
   /* height: 500px; */
   background-color: #fff;
   padding: 2rem 1.5rem;
+  position: relative;
 }
 .madal_tit {
   text-align: center;
@@ -44,7 +55,7 @@
 .modal {
   border: 1.5px solid var(--font_color50);
   margin-top: var(--btn_gap);
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0.85rem;
 }
 .modal_head {
   display: flex;
@@ -133,14 +144,74 @@
 .information > * {
   padding-bottom: var(--gap_2);
 }
-
+.address_payment {
+  /* border: 1px solid red; */
+  padding-bottom: var(--gap_1);
+  margin-bottom: var(--gap_1);
+}
+.address_payment > * {
+  padding-bottom: var(--gap_2);
+}
+input {
+  cursor: pointer;
+}
+.address_payment > p:first-child {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: var(--gap_2);
+}
 .payment_box {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .payment_box > div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 0.5rem 2rem;
   margin-right: 0.25rem;
+  font-weight: 400;
+  cursor: pointer;
 }
 .naver_payment {
+  border: 2px solid var(--naver_color);
+  color: var(--naver_color);
+}
+.kakao_payment {
+  border: 2px solid var(--kakao_color);
+  color: var(--kakao_color);
+}
+.card_payment {
+  border: 2px solid var(--point_color2);
+  color: var(--point_color2);
+}
+
+div.eat_payment {
+  color: gray;
+  border: 2px solid gray;
+}
+
+.check_list {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.modal_btn {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_btn > span {
+  display: block;
+  max-width: 200px;
+  background-color: var(--point_color2);
+  color: #fff;
+  padding: 0.25rem 1rem;
+  margin-top: var(--btn_gap);
+  cursor: pointer;
+}
+.modal-overlay.active {
+  display: flex;
 }

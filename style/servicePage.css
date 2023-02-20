@@ -1,23 +1,27 @@
 @charset "utf-8";
 @import url(./header.css);
 @import url(./footer.css);
+@import url(./modal.css);
+
 :root {
   --mx: 1440px;
   --btn_gap: 32px;
   --gap_1: 16px;
   --gap_2: 8px;
-  --gap_3: 24px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
   --point_color1: #f4bb5f;
   --point_color2: #5c96ca;
   --point_color3: #5197f2;
+  --naver_color: #04d461;
+  --kakao_color: #ffe812;
   color: #232323;
   --font_color70: rgba(35, 35, 35, 0.7);
   --font_color50: rgba(35, 35, 35, 0.5);
   --font_colorBK: #000;
   --font_colorGY: #696868;
   font-size: 16px;
+  background-color: #fff;
 }
 
 .wrap {
@@ -128,6 +132,8 @@ div.btn_wrap {
 .tit > p {
   padding: 0 2rem;
   text-align: center;
+
+  cursor: pointer;
 }
 
 .ring {
@@ -414,10 +420,12 @@ div.btn_wrap {
   transform: translate(-50%, -40%) rotate(45deg);
 }
 /* js click active */
+
 /*  상품정보(기본), 상품후기 를 클릭했을 때 동작 */
 .clickSection.active {
   display: block;
 }
+
 .tit.active .tit_on {
   color: var(--point_color3);
   text-decoration: underline;

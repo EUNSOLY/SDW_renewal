@@ -22,12 +22,13 @@
     />
     <!-- my_css -->
     <link rel="stylesheet" href="./style/servicePage.css" />
+    <script src="./service.js" defer></script>
   </head>
   <body>
     <header class="hd">
       <div class="top_wrap mx">
         <h1 class="logo">
-          <img src="./img/logo_simb.png" alt="술담화 로고" class="pcLogo" />
+          <img src="./img/logo_simb.svg" alt="술담화 로고" class="pcLogo" />
           <a href="./index.html"
             ><img src="./img/logo_심볼.svg" alt="모바일 로고" class="Mlogo" />
           </a>
@@ -80,6 +81,100 @@
         <a href="#none" class="market_btn"><span>담화 마켓</span></a>
       </div>
     </header>
+    <div class="modal-overlay">
+      <div class="modal_wrap">
+        <div class="modal_close"></div>
+        <h2 class="madal_tit">주문 / 결제</h2>
+        <div class="modal">
+          <div class="modal_head">
+            <p>상품정보</p>
+            <div>
+              <p>배송비</p>
+              <p>수량</p>
+              <p>할인</p>
+              <p>적립</p>
+            </div>
+          </div>
+          <article class="modal_content">
+            <!--  상품 정보 작성 -->
+            <div class="bottom_wrap">
+              <div>
+                <div class="modal_product"></div>
+                <div class="modal_text">
+                  <p>[구독상품] 담화박스</p>
+                  <p>옵션 : 담화박스</p>
+                  <p class="mini_text">
+                    매월 셋째주 월요일마다 자동 결제됩니다!
+                  </p>
+                </div>
+              </div>
+              <div class="modal_content_text">
+                <p>무료</p>
+                <p>01</p>
+                <p>-5%</p>
+                <p>10</p>
+              </div>
+            </div>
+            <!-- 이름연락처 작성 시작-->
+            <div class="information_wrap">
+              <div class="address">
+                <p>배송정보</p>
+                <p>
+                  배송지 선택
+                  <span
+                    ><input
+                      type="radio"
+                      value="기본배송지"
+                      name="배송지선택"
+                    />기본배송지</span
+                  >
+                  <span
+                    ><input
+                      type="radio"
+                      value="신규배송지"
+                      name="배송지선택"
+                    />신규배송지</span
+                  >
+                </p>
+              </div>
+              <div class="information">
+                <p>
+                  <span>이름 / 연락처</span> &nbsp;&nbsp;&nbsp;
+                  <span>이은솔 010-1234-4567</span>
+                </p>
+                <p>
+                  <span>배송 요청사항</span> &nbsp;&nbsp;
+                  <span>
+                    <select name="배송 시 요청시항">
+                      <option value="">배송시 요청사항을 입력하세요.</option>
+                      <option value="문앞">문앞에 놔주세요.</option>
+                      <option value="경비실">경비실에 맞겨주세요.</option>
+                    </select>
+                  </span>
+                </p>
+              </div>
+              <!-- 결제 정보란 구조 -->
+              <div class="address_payment">
+                <p>결제정보</p>
+                <p>결제방법 선택</p>
+                <div class="payment_box">
+                  <div class="naver_payment">네이버페이</div>
+                  <div class="kakao_payment">카카오페이</div>
+                  <div class="card_payment">신용카드</div>
+                  <div class="eat_payment">다른결제방법 선택</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="check_list">
+          주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.
+        </p>
+        <div class="modal_btn">
+          <span>주문하기</span>
+        </div>
+      </div>
+    </div>
     <main class="main">
       <div class="service_wrap mx">
         <article class="thumbnail_wrap">
@@ -136,11 +231,11 @@
     </main>
 
     <!--  구독서비스 상품페이지 -->
-    <section class="mx clickSection active">
+    <section class="mx clickSection product_page active">
       <article class="content_box">
         <h2 class="tit content_tit active">
           <p class="ring tit_on">상품정보</p>
-          <p>상품후기</p>
+          <p class="review_tit">상품후기</p>
         </h2>
         <p class="content_text">
           익숙하지 않는 <span>전통주</span> <br />
@@ -203,9 +298,9 @@
     <section class="clickSection preview_wrap active">
       <!-- 구독페이지 담화박스 미리보기 -->
       <article class="preview_box mx pre_1 active">
-        <h2 class="tit previev_tit">
-          <p class="ring active">담화박스</p>
-          <p class="">증류주 담화박스</p>
+        <h2 class="tit previev_tit active">
+          <p class="ring tit_on">담화박스</p>
+          <p class="previe_text">증류주 담화박스</p>
         </h2>
         <p class="previev_sub_tit active">
           매월 <span>셋째주 목요일</span>에 도착해요.
@@ -432,7 +527,7 @@
       <article class="preview_box mx pre_2">
         <h2 class="tit previev_tit">
           <p class="ring">담화박스</p>
-          <p class="active">증류주 담화박스</p>
+          <p class="previe_text active">증류주 담화박스</p>
         </h2>
         <p class="previev_sub_tit active">
           매월 <span>넷째주 목요일</span>에 도착해요.
@@ -658,7 +753,7 @@
       <article class="content_box">
         <h2 class="tit content_tit active">
           <p class="ring">상품정보</p>
-          <p class="tit_on">상품후기</p>
+          <p class="review_tit tit_on">상품후기</p>
         </h2>
       </article>
       <article class="mx">
