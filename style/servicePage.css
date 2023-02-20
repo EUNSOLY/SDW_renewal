@@ -150,6 +150,10 @@ div.btn_wrap {
   left: 100%;
   transform: translate(-50%, -50%);
 }
+
+.content_box {
+  display: none;
+}
 .content_text {
   padding: var(--gap_3) 1rem 0;
   font-size: 2rem;
@@ -245,17 +249,24 @@ div.btn_wrap {
   padding: var(--gap_1, 0);
 }
 .preview_box {
-  display: none;
+  /* display: none; */
   flex-direction: column;
   align-items: center;
 }
 
 .previev_sub_tit {
   padding: 0.5rem 0;
+  text-align: center;
+  display: none;
+}
+.previev_sub_tit span {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--point_color3);
 }
 /* ul */
 .preview_content {
-  display: flex;
+  display: none;
   width: 100%;
   padding: 2rem 0;
   overflow: hidden;
@@ -288,7 +299,7 @@ div.btn_wrap {
   overflow: hidden;
   transition: 0.3s;
 }
-.preview_card:nth-of-type(2) .img_box {
+.pre_1 .preview_card:nth-of-type(2) .img_box {
   background-image: url(../img/담화박스미리보기2.png);
 }
 .pre_1 .preview_card:nth-of-type(3) .img_box {
@@ -334,6 +345,7 @@ div.btn_wrap {
 }
 .announcement {
   padding-top: 3rem;
+  text-align: center;
 }
 /* 증류 담화박스 레이아웃 */
 .pre_2 .preview_card:nth-of-type(1) .img_box {
@@ -420,35 +432,56 @@ div.btn_wrap {
   transform: translate(-50%, -40%) rotate(45deg);
 }
 /* js click active */
+/* 상품정보(기본) */
+.ring.active {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--point_color3);
+}
 
-/*  상품정보(기본), 상품후기 를 클릭했을 때 동작 */
-.clickSection.active {
+.product_page.active {
+  display: block;
+}
+.content_box.active {
+  display: block;
+}
+/* 상품후기 를 클릭했을 때 동작 */
+.review_tit.active {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--point_color3);
+}
+.product_review.active {
   display: block;
 }
 
-.tit.active .tit_on {
-  color: var(--point_color3);
-  text-decoration: underline;
-  font-weight: 500;
+/* 담화박스(기본)*/
+.previev_sub_tit_1.active {
+  display: block;
 }
-/* 담화박스(기본), 증류주담화를 클릭했을 때 동작 */
-.preview_box.active {
+
+.pre_1.active {
   display: flex;
 }
-.tit > *.active {
-  color: var(--point_color3);
-  text-decoration: underline;
+.ring_2.active {
   font-weight: 500;
-}
-.ring::before.active {
-  background-color: var(--point_color3);
-}
-.previev_sub_tit.active > span {
-  color: var(--point_color3);
   text-decoration: underline;
-  font-weight: 500;
+  color: var(--point_color3);
 }
+
 /* 증류담화박스를 클릭 했을 때 */
+.previe_text.active {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--point_color3);
+}
+.previev_sub_tit_2.active {
+  display: block;
+}
+.pre_2.active {
+  display: flex;
+}
+
 @media (max-width: 1200px) {
   .card_box {
     padding: var(--btn_gap) 0;
