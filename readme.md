@@ -37,8 +37,8 @@
 ### 🖐 프로젝트 내 사용언어
 
 <img src="https://simpleicons.org/icons/html5.svg" alt="" width="25px" color="white"></img> HTML  
-CSS  
-JS
+<img src="https://simpleicons.org/icons/css3.svg" alt="" width="25px" color="white"></img> CSS  
+<img src="https://simpleicons.org/icons/javascript.svg" alt="" width="25px" color="white"></img> JS
 
 ### 🖐 약식 기획서 요약
 
