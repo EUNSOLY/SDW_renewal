@@ -1,8 +1,10 @@
 <img src="https://eunsoly.github.io/SDW_renewal/img/logo_%EC%8B%AC%EB%B3%BC.svg" alt="" width="100px"></img>
 
-# 술담화홈페이지 리뉴얼
+# 술담화홈페이지 리뉴얼 ([데모](https://eunsoly.github.io/SDW_renewal/))
 
 ##### 팀원 : 이은솔, 이제은, 이채은, 유상범
+
+<br/>
 
 ### 🖐 프로젝트 목적
 
@@ -80,5 +82,3 @@
    - 와이어 프레임 : index페이지 반응형 제작
    - 시안  
      <img src="https://raw.githubusercontent.com/EUNSOLY/SDW_renewal/473d3db96a16a6c03b4d09862db5fb392f02d058/README_IMG/%EC%9D%B8%EB%8D%B1%EC%8A%A4_%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%8B%9C%EC%95%88.jpg" alt="" width="200px"></img>
-
-### 데모
