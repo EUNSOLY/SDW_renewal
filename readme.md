@@ -42,6 +42,10 @@
 <img src="https://simpleicons.org/icons/css3.svg" alt="" width="25px" color="white"></img> CSS  
 <img src="https://simpleicons.org/icons/javascript.svg" alt="" width="25px" color="white"></img> JS
 
+### 🖐 프로젝트 내 사용 라이브러리
+
+1. Swiper 슬라이드 사용
+
 ### 🖐 약식 기획서 요약
 
 # [GooglePPT 약식 기획서](https://docs.google.com/presentation/d/1sk3Ztypy4TUWd38GX3Doyaa2wZbujd7dWG24v442WVY/edit#)
